@@ -1,12 +1,16 @@
 TensorRT Python Sample for Object Detection
 ======================================
 
+Performance includes memcpy and inference.
+</br>
+
 | Model | Input Size | TRT Nano |
 |:------|:----------:|-----------:|
-| ssd_inception_v2_coco(2017) | 300x300 | 7.36ms |
-| ssd_mobilenet_v1_coco | 300x300 | 9.08ms |
-| ssd_mobilenet_v2_coco | 300x300 | 20.7ms |
+| ssd_inception_v2_coco(2017) | 300x300 | 49ms |
+| ssd_mobilenet_v1_coco | 300x300 | 36ms |
+| ssd_mobilenet_v2_coco | 300x300 | 46ms |
 
+Since the optimization of preprocessing is not ready yet, we don't include image read/write time here.
 </br>
 </br>
 
@@ -85,13 +89,15 @@ from config import model_ssd_mobilenet_v2_coco_2018_03_29 as model
 
 **3. Execute**
 ```C
-$ python3 main.py
+$ python3 main.py [image]
 ```
 
 It takes some time to compile a TensorRT model when the first launching.
 </br>
 After that, TensorRT engine can be created directly with the serialized .bin file
-
+</br>
+</br>
+@ To get more memory, it's recommended to turn-off X-server.
 </br>
 </br>
 </br>

@@ -1,4 +1,5 @@
 import os
+import sys
 import cv2
 import time
 import ctypes
@@ -88,8 +89,8 @@ cuda.memcpy_htod_async(cuda_inputs[0], host_inputs[0], stream)
 context.execute_async(bindings=bindings, stream_handle=stream.handle)
 cuda.memcpy_dtoh_async(host_outputs[1], cuda_outputs[1], stream)
 cuda.memcpy_dtoh_async(host_outputs[0], cuda_outputs[0], stream)
-print("execute times "+str(time.time()-start_time))
 stream.synchronize()
+print("execute times "+str(time.time()-start_time))
 
 output = host_outputs[0]
 height, width, channels = ori.shape
