@@ -1,6 +1,6 @@
 import graphsurgeon as gs
 
-path = 'model/ssd_mobilenet_v1_coco_2018_01_28.pb'
+path = 'model/ssd_mobilenet_v1_coco_2018_01_28/frozen_inference_graph.pb'
 TRTbin = 'TRT_ssd_mobilenet_v1_coco_2018_01_28.bin'
 output_name = ['Postprocessor']
 dims = [3,300,300]
