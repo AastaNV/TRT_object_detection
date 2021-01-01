@@ -27,7 +27,7 @@ $ pip3 install numpy pycuda --user
 
 ## Download model
 
-Please download the object detection model from <a href=https://github.com/tensorflow/models/blob/master/research/object_detection/g3doc/detection_model_zoo.md>TensorFlow model zoo</a>.
+Please download the object detection model from <a href=https://github.com/tensorflow/models/blob/master/research/object_detection/g3doc/tf1_detection_zoo.md>TensorFlow 1 Detection Model Zoo</a>.
 </br>
 
 ```C
@@ -79,7 +79,7 @@ $ sudo jetson_clocks
 ```
 </br>
 
-**2. Update main.py based on the model you used**
+**2. Update main.py file based on the model you used**
 ```C
 from config import model_ssd_inception_v2_coco_2017_11_17 as model
 from config import model_ssd_mobilenet_v1_coco_2018_01_28 as model
