@@ -27,7 +27,7 @@ $ pip3 install numpy pycuda --user
 
 ## Download model
 
-Please download the object detection model from <a href=https://github.com/tensorflow/models/blob/master/research/object_detection/g3doc/detection_model_zoo.md>TensorFlow model zoo</a>.
+Please download the object detection model from <a href=https://github.com/tensorflow/models/blob/master/research/object_detection/g3doc/tf1_detection_zoo.md>TensorFlow model zoo</a>.
 </br>
 
 ```C
